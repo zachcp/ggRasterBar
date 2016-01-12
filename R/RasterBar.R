@@ -42,7 +42,7 @@ rasterbar <- function(df, x, y, image, reorder=TRUE, shrinktop=TRUE) {
       yval_row = df[[y]][[i]]
       yval_normal <- (yval_row/maxy) * ylen
       ymin = 0
-      ymax = yval_normal
+      ymax = maxy
 
       # the image can be shrunk from the top or the bottom
       if (shrinktop) {
