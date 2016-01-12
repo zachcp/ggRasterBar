@@ -1,0 +1,15 @@
+Package: ggRasterBar
+Type: Package
+Title: Bar Charts with Images
+Version: 0.1
+Date: 2016-01-12
+Author: Zach Charlop-Powers
+Description: Create Barcharts using Image Files
+License: MIT
+LazyData: TRUE
+Depends:
+    R (>= 3.1)
+Import: ggplot2 (>= 2.0.0)
+    png
+    grid
+RoxygenNote: 5.0.1
