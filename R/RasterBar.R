@@ -32,9 +32,6 @@ rasterbar <- function(df, x, y, image, reorder=TRUE, shrinktop=TRUE) {
 
   maxy <- max(df[[y]])
   for (i in 1:nrow(df)){
-      print("row")
-      print(df[i,])
-
       dims <- dim(img) #627 104 4
       ylen <- dims[1]
       xlen <- dims[2]
@@ -54,9 +51,9 @@ rasterbar <- function(df, x, y, image, reorder=TRUE, shrinktop=TRUE) {
           img2 <- img[1:yval_normal, 1:xlen, 1:4]
       }
 
+      # add the image in to the
       g <- rasterGrob(img2, interpolate=TRUE)
       plt <- plt + annotation_custom(g,xmin=xmin, xmax=xmax, ymin=ymin, ymax=yval_row)
-      print(paste(xmin,xmax, ymin,ymax, yval_row))
   }
 
   return(plt)
